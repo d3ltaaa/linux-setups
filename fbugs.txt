@@ -1,0 +1,11 @@
+Stage 4:
+Name========================================-Bug=======================================================================================
+Fedora                                       Bluetooth Connection Unstable
+? --> Fedora                                 Three-Finger gestures lead to frozen screnn and problems restarting it with power button
+Alt-Flow-tab                                 Visual bug on dual monitor setup.
+Ulauncher                                    Weird "halo" around the text field and settings window
+Xournal++                                    Sometimes the Actuation Point seems slower. Correlates with non-existing visual pen indicator (/dot)
+Ailur's Widgets + Orchis-Shell-Mod           Battery bar obvious differences between background
+Ailur's Widgets + Orchis-Shell-Mod           Widget-Fields turn white sometimes after certain clicking routine and do not switch back to dark grey
+? --> Fedora                                 Sometimes wierd restarting routines
+
