@@ -1,0 +1,39 @@
+i-Type-Name======================================-Installation-Type================================-Problem========================================
+y GUI  Dconf Editor                               Software
+y GUI  Timeshift                                  dnf install
+n GUI  synergy                                    dnf install                                       SSL-connection-error
+n GUI  synergy                                    flatpak install                                   requires the runtime org.kde.Platform/x86_64/5.15-21.08
+y T    org.kde.Platform/x86_64/5.15-21.08         flatpak install                                   did not work at first but then worked with remote-add
+y GUI  synergy                                    flatpak install                                  
+y GUI  Remnote                                    AppImage install
+y GUI  Spotify                                    Software
+y GUI  Discord                                    Software
+y GUI  Xournal++                                  Software
+y GUI  VLC                                        Software                                          I missclicked to accept privacy policy so I reinstalled
+y GUI  Extension Manager                          Software
+n GUI  Ulauncher                                  dnf install                                       did react to ctrl + space
+
+
+y PAC  git                                        dnf install
+y PAC  VIM                                        dnf install
+y PAC  bpytop                                     dnf install
+y PAC  ncdu                                       dnf install
+y PAC  ranger                                     dnf install
+y PAC  neofetch                                   dnf install
+y PAC  trash-cli                                  dnf install
+y PAC  speedtest-cli                              dnf isntall
+
+
+y EXT  User Themes                                EXT-Manager
+y EXT  Rounded Corners                            EXT-Manager
+y EXT  Rounded Window Corners                     EXT-Manager
+y EXT  Dash to Dock                               EXT-Manager
+n EXT  Dash to Panel                              EXT-Manager
+y EXT  Aylur's Widgets                            EXT-Manager
+n EXT  Top Bar Organizer                          EXT-Manager
+
+y TH   Colloid Icon Theme                         Github
+y TH   Orchis Theme                               Github
+y TH   Roboto Fonts				  Github
+y TH   Orchis Shell Mod                           https://www.pling.com/p/1939902/
+y TH   Backgrounds                                https://www.pling.com/p/1939902/
