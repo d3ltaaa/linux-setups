@@ -37,3 +37,11 @@ y TH   Orchis Theme                               Github
 y TH   Roboto Fonts				  Github
 y TH   Orchis Shell Mod                           https://www.pling.com/p/1939902/
 y TH   Backgrounds                                https://www.pling.com/p/1939902/
+
+
+y EXT  Coverflow Alt-tab                          EXT-Manager                                       dual monitor problem?
+y GUI  Ulauncher                                  dnf install                                       Problem solved with different shortcut
+y EXT  Ulauncher Orchis-Dark-Theme                gnome-look
+y EXT  Ulauncher Bluetooth-quick-connect          ext.ulauncher.io
+y EXT  Ulauncher Session Manager                  ext.ulauncher.io
+y EXT  Ulauncher Pons                             ext.ulauncher.io
