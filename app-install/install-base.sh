@@ -20,8 +20,8 @@ flatpak install flathub com.spotify.Client
 cd /home/falk/Downloads
 
 echo "UI: installing synergy..."
-dnf makecache --refresh
-dnf -y install synergy
+https://api2.prod.symless.com/aws-downloads/synergy/v1-core-standard/1.14.6-snapshot.88fdd263/synergy_1.14.6-snapshot.88fdd263.flatpak
+flatpak install synergy_1.14.6-snapshot.88fdd263.flatpak
 
 echo "UI: downloading remnote.AppImage..."
 cd /home/falk/.local/share/AppImages
