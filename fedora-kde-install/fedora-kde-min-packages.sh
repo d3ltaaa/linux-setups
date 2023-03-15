@@ -81,6 +81,7 @@ dnf install \
 mkdir /home/falk/.local/share/icons 
 mkdir /home/falk/.local/share/applications 
 mkdir /home/falk/.local/share/AppImages 
+mkdir /home/falk/Downloads
 dnf config-manager --add-repo=https://negativo17.org/repos/fedora-spotify.repo \
 dnf install \
   vlc \
@@ -88,7 +89,7 @@ dnf install \
   spotify-client \
   https://download1.rpmfusion.org/nonfree/fedora/rpmfusion-nonfree-release-$(rpm -E %fedora).noarch.rpm \
   discord \
-cd Downloads
+cd /home/falk/Downloads
 curl -O https://api2.prod.symless.com/aws-downloads/synergy/v1-core-standard/1.14.6-snapshot.88fdd263/synergy_1.14.6-snapshot.88fdd263.flatpak
 flatpak install synergy_1.14.6-snapshot.88fdd263.flatpak
 cd /home/falk/.local/share/AppImages
