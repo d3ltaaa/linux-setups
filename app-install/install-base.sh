@@ -41,13 +41,11 @@ wget https://raw.githubusercontent.com/d3ltaaa/linux-setups/master/app-install/r
 cd /home/falk/.local/share/applications 
 touch remnote.desktop
 
-cat > ~/.local/share/applications/remnote.desktop <<EOL 
-[Desktop Entry]
+echo "[Desktop Entry]
 Type=Application
 Name=Remnote
 Exec=/home/falk/.local/share/AppImages/remnote.AppImage
 Icon=/home/falk/.local/share/icons/remnote.png
-Terminal=false
-EOL 
+Terminal=false " | sudo tee ~/.local/share/applications/remnote.desktop > /dev/null
 
 chmod +x remnote.desktop
