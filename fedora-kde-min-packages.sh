@@ -68,7 +68,6 @@ dnf install \
   php php-fpm \
   mariadb mariadb-server \
   yakuake \
-  kate \
   dolphin-plugins \
   git \
   capstone-devel \
