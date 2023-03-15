@@ -1,4 +1,4 @@
-echo "version 0\n"
+echo "version 1\n"
 cd /home/falk/Downloads 
 dnf install \
   https://download1.rpmfusion.org/free/fedora/rpmfusion-free-release-$(rpm -E %fedora).noarch.rpm \
