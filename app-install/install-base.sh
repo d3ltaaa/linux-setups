@@ -47,9 +47,14 @@ wget https://raw.githubusercontent.com/d3ltaaa/linux-setups/master/app-install/r
 
 echo "\n remnote-desktop \n"
 
-echo "[Desktop Entry]
+cat > /home/falk/.local/share/applications/remnote.desktop <<EOL
+[Desktop Entry]
 Type=Application
 Name=Remnote
 Exec=/home/falk/.local/share/AppImages/remnote.AppImage
 Icon=/home/falk/.local/share/icons/remnote.png
-Terminal=false " | tee /home/falk/.local/share/applications/remnote.desktop > /dev/null
+Terminal=false
+EOL
+
+echo "making remnote.desktop executable..."
+chmod +x remnote.desktop
