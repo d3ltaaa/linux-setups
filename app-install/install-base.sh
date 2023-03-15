@@ -53,5 +53,3 @@ Name=Remnote
 Exec=/home/falk/.local/share/AppImages/remnote.AppImage
 Icon=/home/falk/.local/share/icons/remnote.png
 Terminal=false " | tee /home/falk/.local/share/applications/remnote.desktop > /dev/null
-
-chmod +x remnote.desktop
