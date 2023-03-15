@@ -1,4 +1,4 @@
-echo "version 6\n"
+echo "version 7\n"
 echo "UI: creating repos"
   
 mkdir -p /home/falk/.local/share/icons 
