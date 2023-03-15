@@ -1,3 +1,11 @@
+#!/bin/env bash
+##### CHECK FOR SUDO or ROOT ##################################
+if ! [ $(id -u) = 0 ]; then
+  echo "This script must be run as sudo or root, try again..."
+  exit 1
+fi
+
+# Install KDE Packages
 dnf install \
   @"base-x" \
   @"Common NetworkManager Submodules" \
@@ -65,5 +73,5 @@ dnf install \
   sni-qt \
   xorg-x11-drv-libinput -y && \
 systemctl enable sddm && \
-systemctl set-default graphical.target && \
+systemctl set-default graphical.target &&\
 reboot
