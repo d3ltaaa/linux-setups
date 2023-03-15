@@ -8,9 +8,8 @@ mkdir -p /home/falk/Downloads
 
 cd /home/falk/Downloads 
 echo "UI: installing packages ..."
-dnf install \
-  https://download1.rpmfusion.org/free/fedora/rpmfusion-free-release-$(rpm -E %fedora).noarch.rpm
-  https://download1.rpmfusion.org/nonfree/fedora/rpmfusion-nonfree-release-$(rpm -E %fedora).noarch.rpm 
+dnf install https://download1.rpmfusion.org/free/fedora/rpmfusion-free-release-$(rpm -E %fedora).noarch.rpm
+dnf install https://download1.rpmfusion.org/nonfree/fedora/rpmfusion-nonfree-release-$(rpm -E %fedora).noarch.rpm 
 dnf install git vim bpytop ncdu ranger neofetch trash-cli speedtest-cli timeshift firefox flatpak wget discord vlc xournalpp 
   
 
