@@ -1,6 +1,6 @@
 
 cd /home/falk/.local/share/AppImages
-wget --progress=bar:force -O remnote.AppImage https://www.remnote.com/desktop/remnote.AppImage
+wget --progress=bar:force -O remnote.AppImage https://www.remnote.com/desktop/linux
 chmod +x remnote.AppImage
 
 cd /home/falk/.local/share/icons
