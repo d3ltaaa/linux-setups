@@ -1,4 +1,4 @@
-echo "version 3\n"
+echo "version 4\n"
 cd /home/falk/Downloads 
 dnf install \
   https://download1.rpmfusion.org/free/fedora/rpmfusion-free-release-$(rpm -E %fedora).noarch.rpm \
@@ -19,10 +19,10 @@ dnf install \
   vlc \
   xournalpp 
   
-mkdir /home/falk/.local/share/icons 
-mkdir /home/falk/.local/share/applications 
-mkdir /home/falk/.local/share/AppImages 
-mkdir /home/falk/Downloads
+mkdir -p /home/falk/.local/share/icons 
+mkdir -p /home/falk/.local/share/applications 
+mkdir -p /home/falk/.local/share/AppImages 
+mkdir -p /home/falk/Downloads
 
 
 flatpak remote-add --if-not-exists flathub https://flathub.org/repo/flathub.flatpakrepo
@@ -38,9 +38,6 @@ chmod +x remnote.AppImage
 
 cd /home/falk/.local/share/icons
 wget https://raw.githubusercontent.com/d3ltaaa/linux-setups/master/app-install/remnote-install/remnote.png
-
-cd /home/falk/.local/share/applications 
-touch remnote.desktop
 
 echo "[Desktop Entry]
 Type=Application
