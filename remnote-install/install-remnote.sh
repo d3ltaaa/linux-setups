@@ -1,7 +1,5 @@
-cd /home/falk
-mkdir .AppImages
 
-cd /home/falk/.AppImages
+cd /home/falk/.local/share/AppImages
 wget --progress=bar:force -O remnote.AppImage https://www.remnote.com/desktop/linux
 chmod +x remnote.AppImage
 
@@ -13,8 +11,8 @@ cd /home/falk/.local/share/applications
 cat > ~/.local/share/applications/remnote.desktop <<EOL
 [Desktop Entry]
 Type=Application
-Name=RemNote
-Exec=/home/falk/.AppImages/remnote.AppImage %U
-Icon=/opt/remnote/remnote.png
+Name=Remnote
+Exec=/home/falk/.local/share/AppImages/remnote.AppImage
+Icon=/home/falk/.local/share/icons/remnote.png
 Terminal=false
 EOL
