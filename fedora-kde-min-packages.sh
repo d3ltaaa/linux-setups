@@ -63,7 +63,20 @@ dnf install \
   sddm-kcm \
   setroubleshoot \
   sni-qt \
-  xorg-x11-drv-libinput
+  xorg-x11-drv-libinput \
+# my installs
+  timeshift \
+  firefox \
+  flatpak \
+  wget \
+# installing synergy
+cd Downloads \
+curl -O https://api2.prod.symless.com/aws-downloads/synergy/v1-core-standard/1.14.6-snapshot.88fdd263/synergy_1.14.6-snapshot.88fdd263.flatpak \
+flatpak install synergy_1.14.6-snapshot.88fdd263.flatpak \
+# installing remnote
+wget --progress=bar:force https://www.remnote.com/desktop/linux
+
+ 
 systemctl enable sddm && \
 systemctl set-default graphical.target &&\
 reboot
