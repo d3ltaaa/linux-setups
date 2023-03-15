@@ -16,3 +16,4 @@ Exec=/home/falk/.local/share/AppImages/remnote.AppImage
 Icon=/home/falk/.local/share/icons/remnote.png
 Terminal=false
 EOL
+chmod +x remnote.desktop
