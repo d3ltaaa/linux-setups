@@ -82,7 +82,7 @@ mkdir /home/falk/.local/share/icons
 mkdir /home/falk/.local/share/applications 
 mkdir /home/falk/.local/share/AppImages 
 mkdir /home/falk/Downloads
-dnf config-manager --add-repo=https://negativo17.org/repos/fedora-spotify.repo \
+dnf config-manager --add-repo=https://negativo17.org/repos/fedora-spotify.repo 
 dnf install \
   vlc \
   xournalpp \
