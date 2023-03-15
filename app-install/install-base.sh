@@ -19,9 +19,11 @@ flatpak install flathub com.spotify.Client
   
 cd /home/falk/Downloads
 
+# BEARBEITUNG
 echo "UI: installing synergy..."
 https://api2.prod.symless.com/aws-downloads/synergy/v1-core-standard/1.14.6-snapshot.88fdd263/synergy_1.14.6-snapshot.88fdd263.flatpak
 flatpak install synergy_1.14.6-snapshot.88fdd263.flatpak
+#ENDE
 
 echo "UI: downloading remnote.AppImage..."
 cd /home/falk/.local/share/AppImages
@@ -34,6 +36,7 @@ wget https://raw.githubusercontent.com/d3ltaaa/linux-setups/master/app-install/r
 
 echo "UI: Creating and writing to remnote.desktop..."
 
+BEARBEITUNG
 cat > /home/falk/.local/share/applications/remnote.desktop <<EOL
 [Desktop Entry]
 Type=Application
@@ -42,6 +45,7 @@ Exec=/home/falk/.local/share/AppImages/remnote.AppImage
 Icon=/home/falk/.local/share/icons/remnote.png
 Terminal=false
 EOL
+ENDE
 
 echo "UI: making remnote.desktop executable..."
 ls
