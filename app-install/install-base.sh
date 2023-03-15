@@ -1,4 +1,4 @@
-echo "version 5\n"
+echo "version 6\n"
 cd /home/falk/Downloads 
 dnf install \
   https://download1.rpmfusion.org/free/fedora/rpmfusion-free-release-$(rpm -E %fedora).noarch.rpm \
@@ -33,8 +33,8 @@ flatpak install flathub com.spotify.Client
 cd /home/falk/Downloads
 
 echo "\n synergy \n"
-curl -O https://api2.prod.symless.com/aws-downloads/synergy/v1-core-standard/1.14.6-snapshot.88fdd263/synergy_1.14.6-snapshot.88fdd263.flatpak
-flatpak install synergy_1.14.6-snapshot.88fdd263.flatpak
+dnf makecache --refresh
+dnf -y install synergy
 
 echo "\n remnote \n"
 cd /home/falk/.local/share/AppImages
