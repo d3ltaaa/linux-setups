@@ -1,4 +1,4 @@
-echo "version 7\n"
+echo "version 8"
 echo "UI: creating repos"
   
 mkdir -p /home/falk/.local/share/icons 
@@ -11,21 +11,7 @@ echo "UI: installing packages ..."
 dnf install \
   https://download1.rpmfusion.org/free/fedora/rpmfusion-free-release-$(rpm -E %fedora).noarch.rpm \
   https://download1.rpmfusion.org/nonfree/fedora/rpmfusion-nonfree-release-$(rpm -E %fedora).noarch.rpm \
-  git \
-  vim \
-  bpytop \
-  ncdu \
-  ranger \
-  neofetch \
-  trash-cli \
-  speedtest-cli \
-  timeshift \
-  firefox \
-  flatpak \
-  wget \
-  discord \
-  vlc \
-  xournalpp 
+dnf install git vim bpytop ncdu ranger neofetch trash-cli speedtest-cli timeshift firefox flatpak wget discord vlc xournalpp 
   
 
 echo "UI: downloading spotify..."
