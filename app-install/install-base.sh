@@ -59,4 +59,5 @@ Terminal=false
 EOL
 
 echo "UI: making remnote.desktop executable..."
+ls
 chmod +x remnote.desktop
