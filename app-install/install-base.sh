@@ -39,6 +39,7 @@ cd /home/falk/.local/share/icons
 wget https://raw.githubusercontent.com/d3ltaaa/linux-setups/master/app-install/remnote-install/remnote.png
 
 cd /home/falk/.local/share/applications 
+touch remnote.desktop
 
 cat > ~/.local/share/applications/remnote.desktop <<EOL 
 [Desktop Entry]
