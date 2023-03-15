@@ -77,6 +77,10 @@ mkdir /home/falk/.local/share/AppImages \
 
 # enable rpm repositories
 dnf install https://download1.rpmfusion.org/free/fedora/rpmfusion-free-release-$(rpm -E %fedora).noarch.rpm \
+
+# dnf-installations
+dnf install vlc \
+dnf install xournalpp \
  
 systemctl enable sddm && \
 systemctl set-default graphical.target &&\
