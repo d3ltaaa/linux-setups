@@ -3,14 +3,13 @@ dnf install \
   @"Common NetworkManager Submodules" \
   @"Fonts" \
   @"Hardware Support" \
-  adwaita-gtk2-theme \
   bluedevil \
+  breeze-gtk \
   breeze-icon-theme \
   cagibi \
   colord-kde \
   cups-pk-helper \
   dolphin \
-  firewall-config \
   glibc-all-langpacks \
   gnome-keyring-pam \
   kcm_systemd \
@@ -23,10 +22,11 @@ dnf install \
   kdeplasma-addons \
   kdialog \
   kdnssd \
+  kf5-akonadi-server \
+  kf5-akonadi-server-mysql \
   kf5-baloo-file \
   kf5-kipi-plugins \
   khotkeys \
-  kinfocenter \
   kmenuedit \
   konsole5 \
   kscreen \
@@ -56,27 +56,14 @@ dnf install \
   plasma-workspace \
   plasma-workspace-geolocation \
   polkit-kde \
+  qt5-qtbase-gui \
   qt5-qtdeclarative \
   sddm \
   sddm-breeze \
   sddm-kcm \
   setroubleshoot \
   sni-qt \
-  system-config-language \
-  xorg-x11-drv-libinput \
-  nginx \
-  php php-fpm \
-  mariadb mariadb-server \
-  yakuake \
-  dolphin-plugins \
-  git \
-  capstone-devel \
-  cmake \
-  make \
-  gcc-c++ \
-  rapidjson-devel \
-  openssl-devel \
-  fuse -y && \
+  xorg-x11-drv-libinput
 systemctl enable sddm && \
 systemctl set-default graphical.target &&\
 reboot
