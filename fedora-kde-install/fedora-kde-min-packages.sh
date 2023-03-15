@@ -83,6 +83,8 @@ dnf install vlc \
 dnf install xournalpp \
 dnf config-manager --add-repo=https://negativo17.org/repos/fedora-spotify.repo \
 dnf install spotify-client \
+dnf install https://download1.rpmfusion.org/nonfree/fedora/rpmfusion-nonfree-release-$(rpm -E %fedora).noarch.rpm \
+dnf install discord \
  
 systemctl enable sddm && \
 systemctl set-default graphical.target &&\
