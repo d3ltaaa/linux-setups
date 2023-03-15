@@ -4,7 +4,7 @@ wget --progress=bar:force -O remnote.AppImage https://www.remnote.com/desktop/li
 chmod +x remnote.AppImage
 
 cd /home/falk/.local/share/icons
-wget https://raw.githubusercontent.com/d3ltaaa/linux-setups/remnote-install/remnote.png -O remnote.png
+wget https://raw.githubusercontent.com/d3ltaaa/linux-setups/master/remnote-install/remnote.png
 
 cd /home/falk/.local/share/applications
 
