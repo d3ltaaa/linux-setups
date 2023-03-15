@@ -71,11 +71,12 @@ dnf install \
   wget \
   
 # create repositories
-mkdir /home/falk/.local/share/icons
-mkdir /home/falk/.local/share/applications
-mkdir /home/falk/.local/share/AppImages
+mkdir /home/falk/.local/share/icons \
+mkdir /home/falk/.local/share/applications \
+mkdir /home/falk/.local/share/AppImages \
 
-
+# enable rpm repositories
+dnf install https://download1.rpmfusion.org/free/fedora/rpmfusion-free-release-$(rpm -E %fedora).noarch.rpm \
  
 systemctl enable sddm && \
 systemctl set-default graphical.target &&\
