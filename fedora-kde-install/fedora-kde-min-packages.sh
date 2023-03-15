@@ -1,4 +1,3 @@
-cd /home/falk/Downloads
 dnf install \
   @"base-x" \
   @"Common NetworkManager Submodules" \
