@@ -1,7 +1,8 @@
-echo "version 2\n"
+echo "version 3\n"
 cd /home/falk/Downloads 
 dnf install \
   https://download1.rpmfusion.org/free/fedora/rpmfusion-free-release-$(rpm -E %fedora).noarch.rpm \
+  https://download1.rpmfusion.org/nonfree/fedora/rpmfusion-nonfree-release-$(rpm -E %fedora).noarch.rpm
   git \
   vim \
   bpytop \
@@ -13,19 +14,19 @@ dnf install \
   timeshift \
   firefox \
   flatpak \
-  wget 
+  wget \
+  discord \
+  vlc \
+  xournalpp 
   
 mkdir /home/falk/.local/share/icons 
 mkdir /home/falk/.local/share/applications 
 mkdir /home/falk/.local/share/AppImages 
 mkdir /home/falk/Downloads
-dnf config-manager --add-repo=https://negativo17.org/repos/fedora-spotify.repo 
-dnf install \
-  vlc \
-  xournalpp \
-  spotify-client \
-  https://download1.rpmfusion.org/nonfree/fedora/rpmfusion-nonfree-release-$(rpm -E %fedora).noarch.rpm \
-  discord 
+
+
+flatpak remote-add --if-not-exists flathub https://flathub.org/repo/flathub.flatpakrepo
+flatpak install flathub com.spotify.Client
   
 cd /home/falk/Downloads
 
@@ -46,6 +47,6 @@ Type=Application
 Name=Remnote
 Exec=/home/falk/.local/share/AppImages/remnote.AppImage
 Icon=/home/falk/.local/share/icons/remnote.png
-Terminal=false " | sudo tee ~/.local/share/applications/remnote.desktop > /dev/null
+Terminal=false " | tee ~/.local/share/applications/remnote.desktop > /dev/null
 
 chmod +x remnote.desktop
