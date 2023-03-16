@@ -53,6 +53,7 @@ dnf -y install \
     picom \
     xsel \
     xclip \
+    xkill
 
 echo "===> installing chrome-gnome-shell, gnome-tweaks, @development-tools"
 sleep 3
