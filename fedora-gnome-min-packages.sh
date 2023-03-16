@@ -12,6 +12,7 @@ echo "===> enabling epel, rpmfusion -free and -nonfree repos"
 dnf install https://dl.fedoraproject.org/pub/epel/epel-release-latest-9.noarch.rpm
 dnf install https://download1.rpmfusion.org/free/fedora/rpmfusion-free-release-$(rpm -E %fedora).noarch.rpm
 dnf install https://download1.rpmfusion.org/nonfree/fedora/rpmfusion-nonfree-release-$(rpm -E %fedora).noarch.rpm
+dnf makecache --refresh
 
 # rpmfusion repositories are repos to download unofficial software from
 
@@ -45,24 +46,12 @@ flatpak install flathub com.spotify.Client
 # weird behavior Glib-GIO-CRITICAL **: hh:mm:ss: GfileInfo created without standart :: size !!!
 
 echo "===> install synergy"
-echo "Enter your username:"
-read username
-
-echo "Enter your password:"
-read password
-
-echo "Downloading file..."
-
-wget --user="$username" --password="$password" https://api2.prod.symless.com/aws-downloads/synergy/v1-core-standard/1.14.6-snapshot.88fdd263/synergy_1.14.6-snapshot.88fdd263.flatpak
-flatpak install synergy_1.14.6-snapshot.88fdd263.flatpak
-# does not install properly !!! it cant enter password and userinfo
-ls
-echo "OK?"
+curl -L -O "https://rc.symless.com/synergy3/v3.0.68.13-beta/synergy-linux_x64-libssl3-v3.0.68.13-beta.rpm"
+echo "did it work???"
 read temp
-rm synergy_1.14.6-snapshot.88fdd263.flatpak
-ls
-echo "OK?"
-read pmet
+dnf install synergy-linux_x64-libssl3-v3.0.68.13-beta.rpm
+
+
 # remote bundles are not supported !!!
 
 echo "===> downloading remnote.AppImage"
