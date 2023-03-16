@@ -47,7 +47,8 @@ dnf install \
     xorg-x11-server-utils \
     xorg-x11-utils \
     xorg-x11-xauth \
-    xorg-x11-xinit \
+    xorg-x11-xinit 
+dnf install \
     xbacklight \
     redshift \
     picom \
