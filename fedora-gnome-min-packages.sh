@@ -26,6 +26,7 @@ dnf install @base-x gnome-shell gnome-terminal nautilus firefox
 # firefox - Web Browser
 
 echo "===> installing chrome-gnome-shell, gnome-tweaks, @development-tools"
+read tmep
 dnf install chrome-gnome-shell gnome-tweaks @development-tools
 # unable to find match !!!
 
