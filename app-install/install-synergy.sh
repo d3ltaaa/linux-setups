@@ -1,4 +1,4 @@
-# installing synergy
-cd Downloads \
-curl -O https://api2.prod.symless.com/aws-downloads/synergy/v1-core-standard/1.14.6-snapshot.88fdd263/synergy_1.14.6-snapshot.88fdd263.flatpak \
-flatpak install synergy_1.14.6-snapshot.88fdd263.flatpak \
+echo "===> install synergy"
+sleep 3
+curl -L -O "https://rc.symless.com/synergy3/v3.0.68.13-beta/synergy-linux_x64-libssl3-v3.0.68.13-beta.rpm"
+dnf install synergy-linux_x64-libssl3-v3.0.68.13-beta.rpm
