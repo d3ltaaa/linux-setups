@@ -50,14 +50,14 @@ cd /home/falk/.local/share/icons
 wget https://raw.githubusercontent.com/d3ltaaa/linux-setups/master/app-install/remnote-install/remnote.png
 
 echo "===> Writing to remnote.desktop"
-cat > /home/falk/.local/share/applications/remnote.desktop <<EOL
+cat > /home/falk/.local/share/applications/remnote.desktop << EOF
 [Desktop Entry]
 Type=Application
 Name=Remnote
 Exec=/home/falk/.local/share/AppImages/remnote.AppImage
 Icon=/home/falk/.local/share/icons/remnote.png
 Terminal=false
-EOL
+EOF
 
 echo "===> making remnote.desktop executable..."
 ls
