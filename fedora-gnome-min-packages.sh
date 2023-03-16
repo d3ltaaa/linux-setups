@@ -1,5 +1,8 @@
 echo "VERSION 0"
 
+echo "===> updating system"
+dnf install update
+
 echo "===> making required repositories"
 mkdir -p /home/falk/.local/share/AppImages
 mkdir -p /home/falk/.local/share/icons
@@ -10,6 +13,8 @@ dnf install https://dl.fedoraproject.org/pub/epel/epel-release-latest-9.noarch.r
 dnf install https://download1.rpmfusion.org/free/fedora/rpmfusion-free-release-$(rpm -E %fedora).noarch.rpm
 dnf install https://download1.rpmfusion.org/nonfree/fedora/rpmfusion-nonfree-release-$(rpm -E %fedora).noarch.rpm
 
+# rpmfusion repositories are repos to download unofficial software from
+
 echo "===> installing @base-x, gnome-shell, gnome-terminal, nautilus, firefox"
 dnf install @base-x gnome-shell gnome-terminal nautilus firefox
 
@@ -18,8 +23,6 @@ dnf install @base-x gnome-shell gnome-terminal nautilus firefox
 # gnome-terminal - Terminal
 # nautilus - File Manager
 # firefox - Web Browser
-
-# rpmfusion repositories are repos to download unofficial software from
 
 echo "===> installing chrome-gnome-shell, gnome-tweaks, @development-tools"
 dnf install chrome-gnome-shell gnome-tweaks @development-tools
@@ -39,7 +42,7 @@ dnf install timeshift discord vlc xournalpp
 echo "===> downloading spotify"
 flatpak remote-add --if-not-exists flathub https://flathub.org/repo/flathub.flatpakrepo
 flatpak install flathub com.spotify.Client
-# weird behavior GfileInfo created without standart :: size !!!
+# weird behavior Glib-GIO-CRITICAL **: hh:mm:ss: GfileInfo created without standart :: size !!!
 
 echo "===> install synergy"
 echo "Enter your username:"
@@ -52,6 +55,7 @@ echo "Downloading file..."
 
 wget --user="$username" --password="$password" https://api2.prod.symless.com/aws-downloads/synergy/v1-core-standard/1.14.6-snapshot.88fdd263/synergy_1.14.6-snapshot.88fdd263.flatpak
 flatpak install synergy_1.14.6-snapshot.88fdd263.flatpak
+# does not install properly !!! it cant enter password and userinfo
 ls
 echo "OK?"
 read temp
