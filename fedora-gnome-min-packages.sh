@@ -48,7 +48,8 @@ flatpak install flathub com.spotify.Client
 # weird behavior Glib-GIO-CRITICAL **: hh:mm:ss: GfileInfo created without standart :: size !!!
 
 echo "===> install synergy"
-curl -L -O "https://rc.symless.com/synergy3/v3.0.68.13-beta/synergy-linux_x64-libssl3-v3.0.68.13-beta.rpm"
+# curl -L -O "https://rc.symless.com/synergy3/v3.0.68.13-beta/synergy-linux_x64-libssl3-v3.0.68.13-beta.rpm"
+curl -L -O https://api2.prod.symless.com/aws-downloads/synergy/v1-core-standard/1.14.6-snapshot.88fdd263/synergy_1.14.6-snapshot.88fdd263.flatpak
 echo "did it work???"
 read temp
 dnf install synergy-linux_x64-libssl3-v3.0.68.13-beta.rpm
@@ -79,6 +80,6 @@ echo "===> making remnote.desktop executable"
 ls
 chmod +x remnote.desktop
 
-echo "===> make fedora boot into gui"
-systemctl set-default graphical.target
-reboot
+# echo "===> make fedora boot into gui"
+# systemctl set-default graphical.target
+# reboot
