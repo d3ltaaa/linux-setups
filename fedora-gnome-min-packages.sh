@@ -1,4 +1,4 @@
-echo "VERSION 0"
+echo "VERSION 1"
 
 echo "===> updating system"
 dnf install update
