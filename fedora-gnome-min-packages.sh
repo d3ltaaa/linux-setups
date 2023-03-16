@@ -5,6 +5,11 @@ mkdir -p /home/falk/.local/share/AppImages
 mkdir -p /home/falk/.local/share/icons
 mkdir -p /home/falk/.local/share/applications
 
+echo "===> enabling epel, rpmfusion -free and -nonfree repos"
+dnf install https://dl.fedoraproject.org/pub/epel/epel-release-latest-9.noarch.rpm
+dnf install https://download1.rpmfusion.org/free/fedora/rpmfusion-free-release-$(rpm -E %fedora).noarch.rpm
+dnf install https://download1.rpmfusion.org/nonfree/fedora/rpmfusion-nonfree-release-$(rpm -E %fedora).noarch.rpm
+
 echo "===> installing @base-x, gnome-shell, gnome-terminal, nautilus, firefox"
 dnf install @base-x gnome-shell gnome-terminal nautilus firefox
 
@@ -13,10 +18,6 @@ dnf install @base-x gnome-shell gnome-terminal nautilus firefox
 # gnome-terminal - Terminal
 # nautilus - File Manager
 # firefox - Web Browser
-
-echo "===> installing rpmfusion -free and -nonfree repos"
-dnf install https://download1.rpmfusion.org/free/fedora/rpmfusion-free-release-$(rpm -E %fedora).noarch.rpm
-dnf install https://download1.rpmfusion.org/nonfree/fedora/rpmfusion-nonfree-release-$(rpm -E %fedora).noarch.rpm
 
 # rpmfusion repositories are repos to download unofficial software from
 
@@ -41,7 +42,23 @@ flatpak install flathub com.spotify.Client
 # weird behavior GfileInfo created without standart :: size !!!
 
 echo "===> install synergy"
-flatpak install https://api2.prod.symless.com/aws-downloads/synergy/v1-core-standard/1.14.6-snapshot.88fdd263/synergy_1.14.6-snapshot.88fdd263.flatpak
+echo "Enter your username:"
+read username
+
+echo "Enter your password:"
+read password
+
+echo "Downloading file..."
+
+wget --user="$username" --password="$password" https://api2.prod.symless.com/aws-downloads/synergy/v1-core-standard/1.14.6-snapshot.88fdd263/synergy_1.14.6-snapshot.88fdd263.flatpak
+flatpak install synergy_1.14.6-snapshot.88fdd263.flatpak
+ls
+echo "OK?"
+read temp
+rm synergy_1.14.6-snapshot.88fdd263.flatpak
+ls
+echo "OK?"
+read pmet
 # remote bundles are not supported !!!
 
 echo "===> downloading remnote.AppImage"
@@ -63,7 +80,7 @@ Icon=/home/falk/.local/share/icons/remnote.png
 Terminal=false
 EOF
 
-echo "===> making remnote.desktop executable..."
+echo "===> making remnote.desktop executable"
 ls
 chmod +x remnote.desktop
 
