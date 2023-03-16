@@ -1,4 +1,0 @@
-@base-x
-gdm
-natuilus
-firefox
