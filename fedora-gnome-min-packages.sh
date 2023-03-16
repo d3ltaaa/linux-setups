@@ -13,7 +13,8 @@ dnf install https://dl.fedoraproject.org/pub/epel/epel-release-latest-9.noarch.r
 dnf install https://download1.rpmfusion.org/free/fedora/rpmfusion-free-release-$(rpm -E %fedora).noarch.rpm
 dnf install https://download1.rpmfusion.org/nonfree/fedora/rpmfusion-nonfree-release-$(rpm -E %fedora).noarch.rpm
 dnf makecache --refresh
-
+# nothing provides redhat-release >= 9 needed by epel-release-9-4.el19.noarch
+# (try to add '--skip-broken' to skip uninstallable packages)
 # rpmfusion repositories are repos to download unofficial software from
 
 echo "===> installing @base-x, gnome-shell, gnome-terminal, nautilus, firefox"
