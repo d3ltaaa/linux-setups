@@ -118,6 +118,6 @@ chmod +x remnote.desktop
 
 echo "===> make fedora boot into gui"
 sleep 3
-# systemctl enable sddm
-# systemctl set-default graphical.target
-# reboot
+systemctl enable gdm
+ystemctl set-default graphical.target
+reboot
