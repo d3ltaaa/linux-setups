@@ -33,7 +33,7 @@ dnf install @base-x gnome-shell gnome-terminal nautilus firefox
 echo "===> installing xorg and drivers"
 sleep 3
 # X server and drivers
-dnf -y install \
+dnf install \
     glx-utils \
     mesa-dri-drivers \
     mesa-vulkan-drivers \
