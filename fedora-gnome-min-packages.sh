@@ -14,18 +14,20 @@ dnf install @base-x gnome-shell gnome-terminal nautilus firefox
 # nautilus - File Manager
 # firefox - Web Browser
 
-echo "===> installing chrome-gnome-shell, gnome-tweaks, @development-tools"
-sudo dnf install chrome-gnome-shell gnome-tweaks @development-tools
-
-# chrome-gnome-shell - Browser connecter for gnome shell integration
-# gnome-tweaks - To tweak gnome
-# @development-tools - provides basic dev tools
-
 echo "===> installing rpmfusion -free and -nonfree repos"
 dnf install https://download1.rpmfusion.org/free/fedora/rpmfusion-free-release-$(rpm -E %fedora).noarch.rpm
 dnf install https://download1.rpmfusion.org/nonfree/fedora/rpmfusion-nonfree-release-$(rpm -E %fedora).noarch.rpm
 
 # rpmfusion repositories are repos to download unofficial software from
+
+echo "===> installing chrome-gnome-shell, gnome-tweaks, @development-tools"
+dnf install chrome-gnome-shell gnome-tweaks @development-tools
+# unable to find match !!!
+
+# chrome-gnome-shell - Browser connecter for gnome shell integration
+# gnome-tweaks - To tweak gnome
+# @development-tools - provides basic dev tools
+
 
 echo "===> installing git, vim, bpytop, ncdu, ranger, neofetch, trash-cli, speedtest-cli, flatpak, wget"
 dnf install git vim bpytop ncdu ranger neofetch trash-cli speedtest-cli flatpak wget
@@ -36,9 +38,11 @@ dnf install timeshift discord vlc xournalpp
 echo "===> downloading spotify"
 flatpak remote-add --if-not-exists flathub https://flathub.org/repo/flathub.flatpakrepo
 flatpak install flathub com.spotify.Client
+# weird behavior GfileInfo created without standart :: size !!!
 
 echo "===> install synergy"
 flatpak install https://api2.prod.symless.com/aws-downloads/synergy/v1-core-standard/1.14.6-snapshot.88fdd263/synergy_1.14.6-snapshot.88fdd263.flatpak
+# remote bundles are not supported !!!
 
 echo "===> downloading remnote.AppImage"
 cd /home/falk/.local/share/AppImages
