@@ -57,9 +57,9 @@ appimage_programs=(
 # go through each program, ask if it should be installed and add it to the selected programs
 for program in "${dnf_programs[@]}"; do
       while true; do
-          read -p "Install $dnf_program? [y/n] " yn
+          read -p "Install $program? [y/n] " yn
           case $yn in
-              [Yy]* ) dnf_selected_programs+=("$dnf_program"); break;;
+              [Yy]* ) dnf_selected_programs+=("$program"); break;;
               [Nn]* ) break;;
               * ) echo "Enter 'y' or 'n'!";;
           esac
@@ -69,9 +69,9 @@ done
 # go through each free program, ask if it should be installed and add it to the selected programs
 for program in "${free_programs[@]}"; do
       while true; do
-          read -p "Install $free_program? [y/n] " yn
+          read -p "Install $program? [y/n] " yn
           case $yn in
-              [Yy]* ) free_selected_programs+=("$free_program"); break;;
+              [Yy]* ) free_selected_programs+=("$program"); break;;
               [Nn]* ) break;;
               * ) echo "Enter 'y' or 'n'!";;
           esac
@@ -82,9 +82,9 @@ done
 # go through each non-free program, ask if it should be installed and add it to the selected programs
 for program in "${nonfree_programs[@]}"; do
       while true; do
-          read -p "Install $nonfree_program? [y/n] " yn
+          read -p "Install $program? [y/n] " yn
           case $yn in
-              [Yy]* ) nonfree_selected_programs+=("$nonfree_program"); break;;
+              [Yy]* ) nonfree_selected_programs+=("$program"); break;;
               [Nn]* ) break;;
               * ) echo "Enter 'y' or 'n'!";;
           esac
@@ -94,9 +94,9 @@ done
 # go through each flatpak program, ask if it should be installed and add it to the selected programs
 for program in "${flatpak_programs[@]}"; do
       while true; do
-          read -p "Install $flatpak_program? [y/n] " yn
+          read -p "Install $program? [y/n] " yn
           case $yn in
-              [Yy]* ) flatpak_selected_programs+=("$flatpak_program"); break;;
+              [Yy]* ) flatpak_selected_programs+=("$program"); break;;
               [Nn]* ) break;;
               * ) echo "Enter 'y' or 'n'!";;
           esac
@@ -106,9 +106,9 @@ done
 # go through each appimage program, ask if it should be installed and add it to the selected programs
 for program in "${appimage_programs[@]}"; do
       while true; do
-          read -p "Install $appimage_program? [y/n] " yn
+          read -p "Install $program? [y/n] " yn
           case $yn in
-              [Yy]* ) appimage_selected_programs+=("$appimage_program"); break;;
+              [Yy]* ) appimage_selected_programs+=("$program"); break;;
               [Nn]* ) break;;
               * ) echo "Enter 'y' or 'n'!";;
           esac
@@ -132,7 +132,7 @@ dnf install -y "${nonfree_selected_programs[@]}"
 # Install the selected flatpak programs
 flatpak remote-add --if-not-exists flathub https://flathub.org/repo/flathub.flatpakrepo
 flatpak update
-flatpak isntall "${flatpak_selected_programs[@]}"
+flatpak install "${flatpak_selected_programs[@]}"
 
 # Install AppImages (special for each one)
 for program in "${appimage_selected_programs[@]}"
@@ -143,4 +143,3 @@ for program in "${appimage_selected_programs[@]}"
         break
     fi
 done
-
