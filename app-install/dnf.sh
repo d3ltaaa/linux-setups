@@ -1,6 +1,6 @@
 dnf install \
-  @base-x \
-  gdm \
+  # @base-x \
+  # gdm \
   nautilus \
   gnome-terminal \
   firefox \
