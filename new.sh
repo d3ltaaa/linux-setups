@@ -39,4 +39,5 @@ rm spotify.sh
 read -p "Install flatpak?"
 curl https://raw.githubusercontent.com/d3ltaaa/linux-setups/master/app-install/flatpak.sh > flatpak.sh && chmod +x flatpak.sh
 ./flatpak.sh
+cd /home/falk/Downloads
 rm flapak.sh
