@@ -135,8 +135,8 @@ flatpak update
 flatpak install "${flatpak_selected_programs[@]}"
 
 # Install AppImages (special for each one)
-for program in "${appimage_selected_programs[@]}"
-    if [[$program == "remnote"]]; then
+for program in "${appimage_selected_programs[@]}"; do
+    if [[ $program == "remnote" ]]; then
         curl https://raw.githubusercontent.com/d3ltaaa/linux-setups/master/app-install/remnote.sh > remnote.sh && chmod +x remnote.sh
         ./remnote.sh
         rm remnote.sh
