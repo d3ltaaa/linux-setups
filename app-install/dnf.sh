@@ -2,7 +2,7 @@ dnf install \
   @base-x \
   gdm \
   nautilus \
-  terminal \
+  gnome-shell \
   firefox \
   gnome-tweaks \
   @development-tools \
