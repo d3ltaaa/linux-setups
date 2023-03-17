@@ -17,3 +17,4 @@ dnf install \
   wget \
   timeshift \
   xournalpp \
+  ulauncher
