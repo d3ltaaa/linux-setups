@@ -1,6 +1,4 @@
 dnf install \
-  # @base-x \
-  # gdm \
   nautilus \
   gnome-terminal \
   firefox \
@@ -19,3 +17,6 @@ dnf install \
   timeshift \
   xournalpp \
   ulauncher
+
+# @base-x 
+# gdm 
