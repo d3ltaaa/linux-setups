@@ -1,12 +1,22 @@
-read -p "Update system?"
+#!/bin/bash
+#!/bin/bash
+
+read -p "Update system!"
 dnf update 
 
-read -p "Install gdm?"
-dnf install gdm
-
-read -p "Enable and set gdm as default?"
-systemctl enable gdm
-systemctl set-default graphical.target 
+read -p "Do you want to install GDM? [y/n]" yn
+case $yn in
+  [Yy]* )
+    echo "Installing GDM..."
+    dnf install gdm
+    systemctl enable gdm
+    systemctl set-default graphical.target
+    echo "GDM has been installed.";;
+  [Nn]* )
+    echo "GDM will not be installed.";;
+  * )
+    echo "Please answer y or n.";;
+esac
 
 mkdir /home/falk/Downloads
 cd /home/falk/Downloads
