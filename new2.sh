@@ -13,8 +13,9 @@ appimage_selected_programs=()
 dnf_programs=(
   nautilus 
   gnome-terminal 
-  firefox 
-  gnome-tweaks 
+  gnome-tweaks
+  dolphin
+  konsole
   @development-tools 
   vim 
   git 
@@ -26,6 +27,7 @@ dnf_programs=(
   speedtest-cli 
   flatpak 
   wget 
+  firefox 
   timeshift 
   xournalpp 
   ulauncher
@@ -53,7 +55,7 @@ appimage_programs=(
 
 # special dnf programs like synergy are missing
 
-
+echo "dnf_programs:"
 # go through each program, ask if it should be installed and add it to the selected programs
 for program in "${dnf_programs[@]}"; do
       while true; do
@@ -66,6 +68,7 @@ for program in "${dnf_programs[@]}"; do
       done
 done
 
+echo "free_programs:"
 # go through each free program, ask if it should be installed and add it to the selected programs
 for program in "${free_programs[@]}"; do
       while true; do
@@ -78,7 +81,7 @@ for program in "${free_programs[@]}"; do
       done
 done
 
-
+echo "nonfree_programs:"
 # go through each non-free program, ask if it should be installed and add it to the selected programs
 for program in "${nonfree_programs[@]}"; do
       while true; do
@@ -91,6 +94,7 @@ for program in "${nonfree_programs[@]}"; do
       done
 done
 
+echo "flatpak_programs:"
 # go through each flatpak program, ask if it should be installed and add it to the selected programs
 for program in "${flatpak_programs[@]}"; do
       while true; do
@@ -103,6 +107,7 @@ for program in "${flatpak_programs[@]}"; do
       done
 done
 
+echo "appimage_programs"
 # go through each appimage program, ask if it should be installed and add it to the selected programs
 for program in "${appimage_programs[@]}"; do
       while true; do
