@@ -73,4 +73,4 @@ dnf install \
   sni-qt \
   xorg-x11-drv-libinput -y && \
 systemctl enable sddm && \
-systemctl set-default graphical.target &&\
+systemctl set-default graphical.target 
