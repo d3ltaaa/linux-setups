@@ -1,53 +1,22 @@
-#!/bin/bash
-#!/bin/bash
+dnf install @kde-desktop-environment
 
-read -p "Update system!"
-dnf update 
+dnf 
+install Common NetworkManager Submodules
+Core
+base-x 
+Printing Support 
+Hardware Support
+Dial-up Networking Support
+Administration Tools
+Fonts
+Guest Desktop Agents
+Input Methods
+Multimedia
+Standard
+KDE --> installs all the apps
 
-read -p "Do you want to install GDM? [y/n]" yn
-case $yn in
-  [Yy]* )
-    echo "Installing GDM..."
-    dnf install gdm
-    systemctl enable gdm
-    systemctl set-default graphical.target
-    echo "GDM has been installed.";;
-  [Nn]* )
-    echo "GDM will not be installed.";;
-  * )
-    echo "Please answer y or n.";;
-esac
+sudo dnf install plasma-desktop plasma-nm kde-cli-tools kmenuedit kscreen
+sudo dnf install sddm
 
-mkdir /home/falk/Downloads
-cd /home/falk/Downloads
-
-read -p "Install dnf software?"
-curl https://raw.githubusercontent.com/d3ltaaa/linux-setups/master/app-install/dnf.sh > dnf.sh && chmod +x dnf.sh
-./dnf.sh
-rm dnf.sh
-
-read -p "Install free software?"
-curl https://raw.githubusercontent.com/d3ltaaa/linux-setups/master/app-install/free.sh > free.sh && chmod +x free.sh
-./free.sh
-rm free.sh
-
-read -p "Install non-free software?"
-curl https://raw.githubusercontent.com/d3ltaaa/linux-setups/master/app-install/non-free.sh > non-free.sh && chmod +x non-free.sh
-./non-free.sh
-rm non-free.sh
-
-read -p "Install remnote?"
-curl https://raw.githubusercontent.com/d3ltaaa/linux-setups/master/app-install/remnote.sh > remnote.sh && chmod +x remnote.sh
-./remnote.sh
-rm remnote.sh
-
-read -p "Install spotify?"
-curl https://raw.githubusercontent.com/d3ltaaa/linux-setups/master/app-install/spotify.sh > spotify.sh && chmod +x spotify.sh
-./spotify.sh
-rm spotify.sh
-
-read -p "Install flatpak?"
-curl https://raw.githubusercontent.com/d3ltaaa/linux-setups/master/app-install/flatpak.sh > flatpak.sh && chmod +x flatpak.sh
-./flatpak.sh
-cd /home/falk/Downloads
-rm flapak.sh
+KDE-Plasma works with Xournalpp
+I played with the Tablet and touchscreen settings but I dont know if it made a difference
