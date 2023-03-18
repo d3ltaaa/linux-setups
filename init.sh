@@ -67,7 +67,7 @@ while true; do
     esac
 done
 
-dnf install $selected_wm
+dnf install -y $selected_wm
 
 if [[ ! -z $selected_dm ]]; then
     dnf install -y $selected_dm
