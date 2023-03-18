@@ -49,7 +49,7 @@ while true; do
 done
 
 if [[ ! -z $selected_dm ]]; then
-    dnf install $selected_dm
+    dnf install -y $selected_dm
     systemctl enable $selected_dm
     systemctl set-default graphical.target
 else
@@ -60,9 +60,9 @@ fi
 
 if [[ ! -z $selected_de ]]; then
     if [[ $selected_de == "kde-plasma" ]]; then
-        dnf install plasma-desktop plasma-nm kde-cli-tools kmenuedit kscreen
+        dnf install -y plasma-desktop plasma-nm kde-cli-tools kmenuedit kscreen
     elif [[ $selected_de == "gnome" ]]; then
-        dnf install gnome-shell gnome-terminal gnome-tweaks
+        dnf install -y gdm
     else
         echo "Unsupported desktop environment!"
         sleep 3
