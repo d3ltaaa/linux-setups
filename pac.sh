@@ -135,7 +135,7 @@ dnf install -y https://download1.rpmfusion.org/nonfree/fedora/rpmfusion-nonfree-
 dnf install -y "${nonfree_selected_programs[@]}"
 
 # Install the selected flatpak programs
-flatpak remote-add --if-not-exists -y flathub https://flathub.org/repo/flathub.flatpakrepo
+flatpak remote-add --if-not-exists flathub https://flathub.org/repo/flathub.flatpakrepo
 flatpak update
 flatpak install -y "${flatpak_selected_programs[@]}"
 
