@@ -18,7 +18,7 @@ boot_request=""
 echo "Select one display manager:"
 for instance in "${dm[@]}"; do
     while true; do
-        read -p "$instance? [y/n]" yn
+        read -p "$instance? [y/n]: " yn
         case $yn in
             [Yy]* ) selected_dm="$instance"; break;;
             [Nn]* ) break;;
@@ -30,7 +30,7 @@ done
 echo "Select one desktop environment:"
 for instance in "${de[@]}"; do
     while true; do
-        read -p "$instance? [y/n]" yn
+        read -p "$instance? [y/n]: " yn
         case $yn in
             [Yy]* ) selected_de="$instance"; break;;
             [Nn]* ) break;;
@@ -40,7 +40,7 @@ for instance in "${de[@]}"; do
 done
 
 while true; do
-    read -p "Boot after installations? [y/n]" yn
+    read -p "Boot after installations? [y/n]: " yn
     case $yn in
         [Yy]* ) boot_request=1; break;;
         [Nn]* ) boot_request=0; break;;
