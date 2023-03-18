@@ -11,8 +11,15 @@ de=(
   kde-plasma
 )
 
+wm=(
+  @x11
+  @wayland-desktop
+  xorg-x11-server-Xwayland
+)
+
 selected_dm=""
 selected_de=""
+selected_wm=""
 boot_request=""
 
 echo "Select one display manager:"
@@ -39,6 +46,18 @@ for instance in "${de[@]}"; do
     done
 done
 
+echo "Select one window manager:"
+for instance in "${wm[@]}"; do
+    while true; do
+        read -p "$instance? [y/n]: " yn
+        case $yn in
+            [Yy]* ) selected_wm="$instance"; break;;
+            [Nn]* ) break;;
+            * ) echo "Enter 'y' or 'n'";;
+        esac
+    done
+done
+
 while true; do
     read -p "Boot after installations? [y/n]: " yn
     case $yn in
@@ -47,6 +66,8 @@ while true; do
         * ) echo "Enter 'y' or 'n'";;
     esac
 done
+
+dnf install $selected_wm
 
 if [[ ! -z $selected_dm ]]; then
     dnf install -y $selected_dm
