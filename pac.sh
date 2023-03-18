@@ -127,17 +127,17 @@ done
 dnf install -y "${dnf_selected_programs[@]}"
 
 # Install the selected free programs
-dnf install https://download1.rpmfusion.org/free/fedora/rpmfusion-free-release-$(rpm -E %fedora).noarch.rpm
+dnf install -y https://download1.rpmfusion.org/free/fedora/rpmfusion-free-release-$(rpm -E %fedora).noarch.rpm
 dnf install -y "${free_selected_programs[@]}"
 
 # Install the selected nonfree programs
-dnf install https://download1.rpmfusion.org/nonfree/fedora/rpmfusion-nonfree-release-$(rpm -E %fedora).noarch.rpm
+dnf install -y https://download1.rpmfusion.org/nonfree/fedora/rpmfusion-nonfree-release-$(rpm -E %fedora).noarch.rpm
 dnf install -y "${nonfree_selected_programs[@]}"
 
 # Install the selected flatpak programs
-flatpak remote-add --if-not-exists flathub https://flathub.org/repo/flathub.flatpakrepo
+flatpak remote-add --if-not-exists -y flathub https://flathub.org/repo/flathub.flatpakrepo
 flatpak update
-flatpak install "${flatpak_selected_programs[@]}"
+flatpak install -y "${flatpak_selected_programs[@]}"
 
 # Install AppImages (special for each one)
 for program in "${appimage_selected_programs[@]}"; do
