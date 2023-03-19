@@ -47,3 +47,9 @@ Wallpaper:
 SDDM:
 
 ULAUNCHER
+
+Mousebuttons
+
+windowedges
+
+desktop effects
