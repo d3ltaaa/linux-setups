@@ -105,6 +105,8 @@ else
     exit 1
 fi
 
+curl https://raw.githubusercontent.com/d3ltaaa/linux-setups/master/pac.sh > pac.sh && chmod +x pac.sh
+
 if [[ $boot_request == 1 ]]; then
     reboot
 fi
