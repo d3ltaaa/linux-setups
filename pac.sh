@@ -19,6 +19,7 @@ dnf_programs=(
   konsole
   @development-tools 
   vim 
+  gedit
   git 
   bpytop 
   ncdu 
