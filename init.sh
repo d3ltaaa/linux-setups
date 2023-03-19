@@ -69,8 +69,14 @@ done
 
 dnf install -y $selected_wm
 
+
+
 if [[ ! -z $selected_dm ]]; then
     dnf install -y $selected_dm
+    if [[$selected_dm == "sddm"]]; then
+        dnf install sddm-breeze 
+        dnf install sddm-kcm
+    fi
     systemctl enable $selected_dm
     systemctl set-default graphical.target
 else
