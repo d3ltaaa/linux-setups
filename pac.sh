@@ -183,7 +183,7 @@ done
 for program in "${special_selected_programs[@]}"; do
     if [[ $program == "synergy" ]]; then
         echo "In order to install synergy, do the following:"
-        echo "1. go to: https://symless.com/synergy/download!"
+        echo "1. go to: https://symless.com/synergy/download"
         echo "2. Log in!"
         echo "3. click on:https://api2.prod.symless.com/aws-downloads/synergy/v1-core-standard/1.14.6-snapshot.88fdd263/synergy_1.14.6-snapshot.88fdd263.flatpak"
         echo "4. Go to the Downloads folder"
