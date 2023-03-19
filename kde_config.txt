@@ -53,3 +53,4 @@ Mousebuttons
 windowedges
 - settings > Appearance > Window Decorations > window border size > no borders
 desktop effects
+- mac customization video
