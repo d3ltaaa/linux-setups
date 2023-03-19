@@ -74,15 +74,18 @@ dnf install -y $selected_wm
 if [[ ! -z $selected_dm ]]; then
     dnf install -y $selected_dm
     if [[$selected_dm == "sddm"]]; then
-        dnf install sddm-breeze 
-        dnf install sddm-kcm
+        curl https://raw.githubusercontent.com/d3ltaaa/linux-setups/master/kde.sh > kde.sh && chmod +x kde.sh
+        ./kde.sh
+        rm kde.sh
     fi
-    systemctl enable $selected_dm
-    systemctl set-default graphical.target
-else
+ 
+else if [[$selected_dm == ""]]; then
     echo "No display manager selected!"
     sleep 3
     exit 1
+else
+    systemctl enable $selected_dm
+    systemctl set-default graphical.target
 fi
 
 if [[ ! -z $selected_de ]]; then
