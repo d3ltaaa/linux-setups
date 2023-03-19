@@ -126,6 +126,15 @@ done
 # Install the selected dnf programs
 dnf install -y "${dnf_selected_programs[@]}"
 
+# Fixes
+for program in "${dnf_selected_programs[@]}"; do
+    if [[ $program == "xournalpp" ]]; do
+        curl https://raw.githubusercontent.com/d3ltaaa/linux-setups/master/app-install/fix-xournalpp.sh > fix-xournalpp.sh && chmod +x fix-xournalpp.sh
+        ./fix-xournalpp.sh
+        rm fix-xournalpp.sh
+        break;
+    fi
+
 # Install the selected free programs
 dnf install -y https://download1.rpmfusion.org/free/fedora/rpmfusion-free-release-$(rpm -E %fedora).noarch.rpm
 dnf install -y "${free_selected_programs[@]}"
