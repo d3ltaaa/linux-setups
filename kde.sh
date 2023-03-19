@@ -40,7 +40,6 @@ dnf install \
   kscreenlocker \
   ksshaskpass \
   ksysguard \
-  kwalletmanager5 \
   kwebkitpart \
   kwin \
   NetworkManager-config-connectivity-fedora \
