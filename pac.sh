@@ -147,7 +147,7 @@ dnf install -y "${dnf_selected_programs[@]}"
 
 # Fixes
 for program in "${dnf_selected_programs[@]}"; do
-    if [[ $program == "xournalpp" ]]; do
+    if [[ $program == "xournalpp" ]]; then
         curl https://raw.githubusercontent.com/d3ltaaa/linux-setups/master/app-install/fix-xournalpp.sh > fix-xournalpp.sh && chmod +x fix-xournalpp.sh
         ./fix-xournalpp.sh
         rm fix-xournalpp.sh
