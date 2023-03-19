@@ -1,0 +1,12 @@
+Synergy:
+- edit > preferences > hide synergy on start-up
+
+Settings:
+- Startup and Shutdown > Autostart > add > add-application --> synergy, ulauncher
+
+Colloid-icon-theme:
+- terminal:
+cd /home/falk/Downloads
+git clone https://github.com/vinceliuice/Colloid-icon-theme.git
+cd /home/falk/Donwloads/Colloid-icon-theme
+./install.sh -t default grey
