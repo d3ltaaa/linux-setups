@@ -29,6 +29,7 @@ Colloid-global-theme:
   Change/delete Theme > Drop-Down-Menu --> Colloid --> Use this Theme
 - settings:
   Appearance > Application Style --> kvantum --> apply
+  Appearance > Window Decorations --> Remove More actions for this window + On all desktops
   
 Digital-Clock in Top-Panel:
 - top-panel-right-click > edit-mode > add-widget > digital-clock --> drag to panel 
