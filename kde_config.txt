@@ -41,3 +41,9 @@ Latte Dock:
   sudo dnf install latte-dock
   curl https://raw.githubusercontent.com/d3ltaaa/linux-setups/master/config/dock.layout.latte > dock.layout.latte 
 - right-click latte-dock in bottom > Configure Latte... > Layout Editor > Import --> /path/to/dock.layout.latte
+
+Wallpaper:
+
+SDDM:
+
+ULAUNCHER
