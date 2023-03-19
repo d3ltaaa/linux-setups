@@ -29,6 +29,7 @@ dnf_programs=(
   speedtest-cli 
   flatpak 
   wget 
+  tar
   firefox 
   timeshift 
   xournalpp 
