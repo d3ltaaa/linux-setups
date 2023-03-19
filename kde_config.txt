@@ -29,3 +29,14 @@ Colloid-global-theme:
   Change/delete Theme > Drop-Down-Menu --> Colloid --> Use this Theme
 - settings:
   Appearance > Application Style --> kvantum --> apply
+  
+Digital-Clock in Top-Panel:
+- top-panel-right-click > edit-mode > add-widget > digital-clock --> drag to panel 
+- add-spacer > drag between digital-clock and application launcher
+- remove global menu
+
+Latte Dock:
+- Terminal:
+  sudo dnf install latte-dock
+  curl https://raw.githubusercontent.com/d3ltaaa/linux-setups/master/config/dock.layout.latte > dock.layout.latte 
+- right-click latte-dock in bottom > Configure Latte... > Layout Editor > Import --> /path/to/dock.layout.latte
