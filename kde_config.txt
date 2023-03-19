@@ -1,12 +1,31 @@
 Synergy:
 - edit > preferences > hide synergy on start-up
 
-Settings:
-- Startup and Shutdown > Autostart > add > add-application --> synergy, ulauncher
+Startup Applications:
+- settings:
+  Startup and Shutdown > Autostart > add > add-application --> synergy, ulauncher
 
 Colloid-icon-theme:
 - terminal:
-cd /home/falk/Downloads
-git clone https://github.com/vinceliuice/Colloid-icon-theme.git
-cd /home/falk/Donwloads/Colloid-icon-theme
-./install.sh -t default grey
+  cd /home/falk/Downloads
+  git clone https://github.com/vinceliuice/Colloid-icon-theme.git
+  cd /home/falk/Donwloads/Colloid-icon-theme
+  ./install.sh -t default grey
+- settings:
+  Appearance > Icons --> Colloid --> apply
+
+Colloid-global-theme:
+- terminal:
+  cd /home/falk/Downloads
+  git clone https://github.com/vinceliuice/Colloid-kde.git
+  cd /home/falk/Downloads/Colloid-kde
+  ./install
+- settings:
+  Appearance > Global Theme --> Colloid-light --> apply
+- terminal:
+  reboot
+- kvantum-manager:
+  Install/Update Theme > /path/to/Colloid-kde/kvantum/Colloid --> Colloid
+  Change/delete Theme > Drop-Down-Menu --> Colloid --> Use this Theme
+- settings:
+  Appearance > Application Style --> kvantum --> apply
