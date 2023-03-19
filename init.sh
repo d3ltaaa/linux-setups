@@ -67,32 +67,27 @@ while true; do
     esac
 done
 
-if [[$selected_wm == "x11"]]; then
+if [[ $selected_wm == "x11" ]]; then
     dnf install xorg-x11-server-Xorg xorg-x11-utils xorg-x11-xauth xorg-x11-apps
 else
     dnf install -y $selected_wm
 fi
 
-
-
 if [[ ! -z $selected_dm ]]; then
-    if [[$selected_dm == "sddm"]]; then
+    if [[ $selected_dm == "sddm" ]]; then
         curl https://raw.githubusercontent.com/d3ltaaa/linux-setups/master/kde.sh > kde.sh && chmod +x kde.sh
         ./kde.sh
         rm kde.sh
     else 
-        dnf install $selected_dm
+        dnf install -y $selected_dm
     fi
- 
-else if [[$selected_dm == ""]]; then
+    systemctl enable $selected_dm
+    systemctl set-default graphical.target
+elif [[ $selected_dm == "" ]]; then
     echo "No display manager selected!"
     sleep 3
     exit 1
 fi
-
-systemctl enable $selected_dm
-systemctl set-default graphical.target
-
 
 if [[ ! -z $selected_de ]]; then
     if [[ $selected_de == "kde-plasma" ]]; then
