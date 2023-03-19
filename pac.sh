@@ -7,6 +7,7 @@ free_selected_programs=()
 nonfree_selected_programs=()
 flatpak_selected_programs=()
 appimage_selected_programs=()
+special_selected_programs=()
 
 
 # Define the list of programs to install
@@ -51,6 +52,10 @@ flatpak_programs=(
 
 appimage_programs=(
   remnote
+)
+
+special_programs=(
+  synergy
 )
 
 # special dnf programs like synergy are missing
@@ -121,6 +126,20 @@ for program in "${appimage_programs[@]}"; do
 done
 
 
+echo "special_programs"
+# go through each appimage program, ask if it should be installed and add it to the selected programs
+for program in "${special_programs[@]}"; do
+      while true; do
+          read -p "Install $program? [y/n] " yn
+          case $yn in
+              [Yy]* ) special_selected_programs+=("$program"); break;;
+              [Nn]* ) break;;
+              * ) echo "Enter 'y' or 'n'!";;
+          esac
+      done
+done
+
+
 
 
 # Install the selected dnf programs
@@ -155,5 +174,18 @@ for program in "${appimage_selected_programs[@]}"; do
         ./remnote.sh
         rm remnote.sh
         break
+    fi
+done
+
+# Install the special programs
+for program in "${special_selected_programs[@]}"; do
+    if [[ $program == "synergy" ]]; then
+        echo "In order to install synergy, do the following:"
+        echo "1. go to: https://symless.com/synergy/download!"
+        echo "2. Log in!"
+        echo "3. click on:https://api2.prod.symless.com/aws-downloads/synergy/v1-core-standard/1.14.6-snapshot.88fdd263/synergy_1.14.6-snapshot.88fdd263.flatpak"
+        echo "4. Go to the Downloads folder"
+        echo "5. Install synergy with flatpak"
+        break;
     fi
 done
