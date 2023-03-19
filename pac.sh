@@ -17,6 +17,7 @@ dnf_programs=(
   gnome-tweaks
   dolphin
   konsole
+  kvantum
   @development-tools 
   vim 
   gedit
