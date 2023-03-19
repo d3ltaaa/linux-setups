@@ -65,7 +65,7 @@ echo "dnf_programs:"
 # go through each program, ask if it should be installed and add it to the selected programs
 for program in "${dnf_programs[@]}"; do
       while true; do
-          read -p "Install $program? [y/n] " yn
+          read -p "Install $program? [y/n]: " yn
           case $yn in
               [Yy]* ) dnf_selected_programs+=("$program"); break;;
               [Nn]* ) break;;
@@ -78,7 +78,7 @@ echo "free_programs:"
 # go through each free program, ask if it should be installed and add it to the selected programs
 for program in "${free_programs[@]}"; do
       while true; do
-          read -p "Install $program? [y/n] " yn
+          read -p "Install $program? [y/n]: " yn
           case $yn in
               [Yy]* ) free_selected_programs+=("$program"); break;;
               [Nn]* ) break;;
@@ -91,7 +91,7 @@ echo "nonfree_programs:"
 # go through each non-free program, ask if it should be installed and add it to the selected programs
 for program in "${nonfree_programs[@]}"; do
       while true; do
-          read -p "Install $program? [y/n] " yn
+          read -p "Install $program? [y/n]: " yn
           case $yn in
               [Yy]* ) nonfree_selected_programs+=("$program"); break;;
               [Nn]* ) break;;
@@ -104,7 +104,7 @@ echo "flatpak_programs:"
 # go through each flatpak program, ask if it should be installed and add it to the selected programs
 for program in "${flatpak_programs[@]}"; do
       while true; do
-          read -p "Install $program? [y/n] " yn
+          read -p "Install $program? [y/n]: " yn
           case $yn in
               [Yy]* ) flatpak_selected_programs+=("$program"); break;;
               [Nn]* ) break;;
@@ -117,7 +117,7 @@ echo "appimage_programs"
 # go through each appimage program, ask if it should be installed and add it to the selected programs
 for program in "${appimage_programs[@]}"; do
       while true; do
-          read -p "Install $program? [y/n] " yn
+          read -p "Install $program? [y/n]: " yn
           case $yn in
               [Yy]* ) appimage_selected_programs+=("$program"); break;;
               [Nn]* ) break;;
@@ -131,7 +131,7 @@ echo "special_programs"
 # go through each appimage program, ask if it should be installed and add it to the selected programs
 for program in "${special_programs[@]}"; do
       while true; do
-          read -p "Install $program? [y/n] " yn
+          read -p "Install $program? [y/n]: " yn
           case $yn in
               [Yy]* ) special_selected_programs+=("$program"); break;;
               [Nn]* ) break;;
