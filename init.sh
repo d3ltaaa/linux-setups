@@ -1,5 +1,5 @@
 #!/bin/bash
-
+echo "version 1"
 dm=(
   sddm
   gdm
