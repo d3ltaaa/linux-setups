@@ -153,6 +153,7 @@ for program in "${dnf_selected_programs[@]}"; do
         rm fix-xournalpp.sh
         break;
     fi
+done
 
 # Install the selected free programs
 dnf install -y https://download1.rpmfusion.org/free/fedora/rpmfusion-free-release-$(rpm -E %fedora).noarch.rpm
