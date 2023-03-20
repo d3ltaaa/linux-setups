@@ -193,6 +193,6 @@ for program in "${special_selected_programs[@]}"; do
         echo "4. Go to the Downloads folder"
         echo "5. Install synergy with flatpak"
     elif [[ $program == "vs-code" ]]; then
-        flatpak install https://flathub.org/repo/appstream/com.visualstudio.code.flatpakref
+        flatpak install -y https://flathub.org/repo/appstream/com.visualstudio.code.flatpakref
     fi
 done
