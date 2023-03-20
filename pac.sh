@@ -35,6 +35,7 @@ dnf_programs=(
   timeshift 
   xournalpp 
   ulauncher
+  libreoffice
 )
 
 # Define the list of programs to install
@@ -59,6 +60,7 @@ appimage_programs=(
 
 special_programs=(
   synergy
+  vs-code
 )
 
 # special dnf programs like synergy are missing
@@ -190,6 +192,7 @@ for program in "${special_selected_programs[@]}"; do
         echo "3. click on:https://api2.prod.symless.com/aws-downloads/synergy/v1-core-standard/1.14.6-snapshot.88fdd263/synergy_1.14.6-snapshot.88fdd263.flatpak"
         echo "4. Go to the Downloads folder"
         echo "5. Install synergy with flatpak"
-        break;
+    elif [[ $program == "vs-code" ]]; then
+        flatpak install https://flathub.org/repo/appstream/com.visualstudio.code.flatpakref
     fi
 done
