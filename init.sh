@@ -86,6 +86,7 @@ fi
 if [[ ! -z $selected_de ]]; then
     if [[ $selected_de == "kde-plasma" ]]; then
         dnf install -y plasma-desktop
+        dnf install sddm-kcm
         dnf install -y konsole
     elif [[ $selected_de == "gnome" ]]; then
         dnf install -y gdm
