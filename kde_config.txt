@@ -39,8 +39,8 @@ Digital-Clock in Top-Panel:
 Latte Dock:
 - Terminal:
   sudo dnf install latte-dock
-  curl https://raw.githubusercontent.com/d3ltaaa/linux-setups/master/config/dock.layout.latte > dock.layout.latte 
-- right-click latte-dock in bottom > Configure Latte... > Layout Editor > Import --> /path/to/dock.layout.latte
+  curl https://raw.githubusercontent.com/d3ltaaa/linux-setups/master/config/dock_updated.layout.latte > dock_updated.layout.latte 
+- right-click latte-dock in bottom > Configure Latte... > Layout Editor > Import --> /path/to/dock_updated.layout.latte
 
 Wallpaper:
 
