@@ -3,7 +3,7 @@ Synergy:
 
 Startup Applications:
 - settings:
-  Startup and Shutdown > Autostart > add > add-application --> synergy, ulauncher
+  Startup and Shutdown > Autostart > add > add-application --> synergy, ulauncher, latte
 
 Colloid-icon-theme:
 - terminal:
