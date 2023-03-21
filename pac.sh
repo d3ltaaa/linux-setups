@@ -18,6 +18,7 @@ dnf_programs=(
   dolphin
   konsole
   kvantum
+  latte-dock
   @development-tools 
   vim 
   gedit
