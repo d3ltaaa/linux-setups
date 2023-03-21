@@ -85,7 +85,9 @@ fi
 
 if [[ ! -z $selected_de ]]; then
     if [[ $selected_de == "kde-plasma" ]]; then
-        dnf install -y @kde-desktop-minimal
+        curl https://raw.githubusercontent.com/d3ltaaa/linux-setups/master/kde.sh > kde.sh && chmod +x kde.sh
+        ./kde.sh
+        rm kde.sh
     elif [[ $selected_de == "gnome" ]]; then
         dnf install -y gdm
     else
