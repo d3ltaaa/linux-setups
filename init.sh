@@ -74,11 +74,7 @@ else
 fi
 
 if [[ ! -z $selected_dm ]]; then
-    if [[ $selected_dm == "sddm" ]]; then
-        echo "sddm is installed later"
-    else 
-        dnf install -y $selected_dm
-    fi
+    dnf install -y $selected_dm
     systemctl enable $selected_dm
     systemctl set-default graphical.target
 elif [[ $selected_dm == "" ]]; then
@@ -89,9 +85,7 @@ fi
 
 if [[ ! -z $selected_de ]]; then
     if [[ $selected_de == "kde-plasma" ]]; then
-        curl https://raw.githubusercontent.com/d3ltaaa/linux-setups/master/kde.sh > kde.sh && chmod +x kde.sh
-        ./kde.sh
-        rm kde.sh
+        dnf install -y @kde-desktop-minimal
     elif [[ $selected_de == "gnome" ]]; then
         dnf install -y gdm
     else
