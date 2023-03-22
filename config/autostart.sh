@@ -44,7 +44,7 @@ EOF
 
 # ulauncher
 mkdir -p /home/falk/.config/autostart
-cat > /home/falk/.config/autostart/ ulauncher.desktop<< EOF
+cat > /home/falk/.config/autostart/ ulauncher.desktop << EOF
 [Desktop Entry]
 Categories=GNOME;GTK;Utility;
 Comment=Application launcher for Linux
