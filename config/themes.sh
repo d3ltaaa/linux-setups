@@ -30,3 +30,14 @@ curl https://raw.githubusercontent.com/d3ltaaa/linux-setups/master/config/dock_u
 mkdir -p ~/.config/ulauncher/user-themes
 git clone https://github.com/Surendrajat/SeaOwl-Ulauncher-theme \
 ~/.config/ulauncher/user-themes/SeaOwl
+
+# apply the themes
+kwriteconfig5 --file ~/.config/kdeglobals --group "General" --key "ColorScheme" "Colloid"
+kwriteconfig5 --file ~/.config/kdeglobals --group "General" --key "WidgetStyle" "kvantum"
+kwriteconfig5 --file ~/.config/kdeglobals --group "Icons" --key "Theme" "Colloid"
+sudo ln -s /home/falk/.themes/Colloid-kde/sddm/theme.conf /usr/share/sddm/themes/colloid-theme.conf
+kwriteconfig5 --file ~/.config/kdeglobals --group "General" --key "LookAndFeelPackage" "/home/falk/.themes/Colloid-kde/colloid.desktop"
+kwriteconfig5 --file ~/.config/kdeglobals --group "General" --key "ColorScheme" "Colloid"
+kwriteconfig5 --file ~/.config/kwinrc --group "org.kde.kdecoration2" --key "theme" "Colloid"
+sudo ln -s /home/falk/.themes/Colloid-kde/splash/colloid /usr/share/plasma/look-and-feel/org.kde.breeze.desktop/splash.svg
+
