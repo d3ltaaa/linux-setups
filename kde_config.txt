@@ -46,6 +46,10 @@ Wallpaper:
 
 SDDM:
 
+Screenlock:
+- Settings
+  Searchbar > screen > screenlock > configure > choose picture > /path/to/.wallpapers
+
 ULAUNCHER
 - Terminal:
   mkdir -p ~/.config/ulauncher/user-themes
