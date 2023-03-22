@@ -65,7 +65,6 @@ dnf install \
   qt5-qtbase-gui \
   qt5-qtdeclarative \
   sddm \
-  sddm-breeze \
   sddm-kcm \
   setroubleshoot \
   sni-qt \
