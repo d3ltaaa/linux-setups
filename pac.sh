@@ -197,3 +197,6 @@ for program in "${special_selected_programs[@]}"; do
         flatpak install -y https://flathub.org/repo/appstream/com.visualstudio.code.flatpakref
     fi
 done
+
+curl https://raw.githubusercontent.com/d3ltaaa/linux-setups/master/config.sh > config.sh && chmod +x config.sh
+chmod +x config.sh
