@@ -12,6 +12,10 @@ git clone https://github.com/vinceliuice/Colloid-kde.git
 cd /home/falk/.themes/Colloid-kde
 ./install.sh
 
+# colloid-kde-theme
+cd /home/falk/.themes/Colloid-kde/sddm
+./install.sh
+
 # latte-dock
 mkdir -p /home/falk/.themes
 cd /home/falk/.themes
