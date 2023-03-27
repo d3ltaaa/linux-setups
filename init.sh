@@ -9,6 +9,7 @@ de=(
   gnome
   xfce
   kde-plasma
+  awesome
 )
 
 wm=(
@@ -68,7 +69,7 @@ while true; do
 done
 
 if [[ $selected_wm == "x11" ]]; then
-    dnf install xorg-x11-server-Xorg xorg-x11-utils xorg-x11-xauth xorg-x11-apps
+    dnf install @base-x xorg-x11-server-Xorg xorg-x11-utils xorg-x11-xauth xorg-x11-apps
 else
     dnf install -y $selected_wm
 fi
@@ -91,6 +92,8 @@ if [[ ! -z $selected_de ]]; then
         dnf install -y konsole
     elif [[ $selected_de == "gnome" ]]; then
         dnf install -y gdm
+    elif [[ $selected_de == "awesome"]]; then
+        dnf install -y awesome
     else
         echo "Unsupported desktop environment!"
         sleep 3
