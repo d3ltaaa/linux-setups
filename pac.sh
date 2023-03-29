@@ -19,6 +19,7 @@ dnf_programs=(
   konsole
   kvantum
   latte-dock
+  bismuth
   @development-tools 
   vim 
   gedit
