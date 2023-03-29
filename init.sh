@@ -92,7 +92,7 @@ if [[ ! -z $selected_de ]]; then
         dnf install -y konsole
     elif [[ $selected_de == "gnome" ]]; then
         dnf install -y gdm
-    elif [[ $selected_de == "awesome"]]; then
+    elif [[ $selected_de == "awesome" ]]; then
         dnf install -y awesome
     else
         echo "Unsupported desktop environment!"
