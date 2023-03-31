@@ -51,7 +51,7 @@ t
 2
 19
 # partition 3 is already 'linux filesystem'
-
+w
 
 # File system
 # Format the EFI system to FAT32
