@@ -159,6 +159,6 @@ sudo vim .xinitrc
 "exec awesome"
 
 ######################################
-mkdir .config
+mkdir -p /home/falk/.config/awesome
 cd .config
 cp /etc/xdg/awesome/rc.lua /home/falk/.config/awesome
