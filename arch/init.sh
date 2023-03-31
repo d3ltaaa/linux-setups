@@ -158,3 +158,7 @@ sudo vim .xinitrc
 # delete last 5 lines
 "exec awesome"
 
+######################################
+mkdir .config
+cd .config
+cp /etc/xdg/awesome/rc.lua /home/falk/.config/awesome
