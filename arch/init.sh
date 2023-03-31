@@ -138,6 +138,12 @@ exit
 
 umount -R /mnt
 
+reboot
+
+#######################################
+#          After reboot               #
+#######################################
+
 # install important packages
 firefox alacritty alsa-utils pipewire git bluez
 
