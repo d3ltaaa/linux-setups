@@ -16,8 +16,10 @@ timedatectl status
 # check disks
 fdisk -l
 # search for the right amount of GB
+
 # partition the right drive
 fdisk /dev/nvme0n1
+
 # create gpt partition table
 g
 # add a new partition (EFI)
@@ -49,4 +51,92 @@ t
 2
 19
 # partition 3 is already 'linux filesystem'
+
+
+# File system
+# Format the EFI system to FAT32
+mkfs.fat -F32 /dev/nvme0n1p1
+
+# Format the Swap system
+mkswap /dev/nvme0n1p2
+
+# enable the swap 
+swapon /dev/nvme0n1p2
+
+# Format the linux filesystem to Ext4
+mkfs.ext4 /dev/nvme0n1p3
+
+# mount the linux filesystem
+mount /dev/nvme0n1p3 /mnt
+
+# pacstrap to install base system
+pacstrap /mnt base linux linux-firmware
+
+# Generate an fstab file (files-ystem-table)
+genfstab -U /mnt >> /mnt/etc/fstab
+
+# Change root into the new system
+arch-chroot /mnt
+
+# set the time zone
+ln -sf /usr/share/zoneinfo/Europe/Berlin /etc/localtime
+
+# set hardware clock
+hwclock --systohc
+
+# install an editor
+pacman -S vim
+
+# set locale
+# uncomment locale in locale.gen
+vim /etc/locale.gen
+locale-gen
+echo LANG=en_US.UTF-8 > /etc/locale.conf
+
+# set the right keyboard layout
+echo KEYMAP=de-latin1 > /etc/vconsole.conf 
+
+# set hostname
+echo LAPTOP-FH /etc/hostname
+
+# append in /etc/hosts
+"127.0.0.1   localhost
+::1         localhost
+127.0.1.1   LAPTOP-FH.localdomain   LAPTOP-FH"
+
+# set root pswd
+passwd
+
+# create new user
+useradd -m falk
+passwd falk
+usermod -aG wheel,audio,video,optical falk
+
+
+# install sudo
+pacman -S sudo 
+
+# open the sudoers file
+EDITOR=vim visudo 
+# uncomment: %wheel ALL=(ALL) ALL
+
+# install grub
+pacman -S grub efibootmgr dosfstools os-prober mtools
+mkdir /boot/EFI
+mount /dev/nvme0n1p1 /boot/EFI
+grub-install --target=x86_64-efi --bootloader-id=grub_uefi --recheck
+grub-mkconfig -o /boot/grub/grub.cfg
+
+# install important packages
+pacman -S networkmanager firefox alacritty alsa-utils pipewire git bluez
+
+# enable the different managers
+systemctl enable NetworkManager
+systemctl enable bluetooth.service
+systemctl enable bluetooth-mesh.service
+
+exit
+
+umount -l /mnt
+
 
