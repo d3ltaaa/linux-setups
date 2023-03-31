@@ -124,7 +124,7 @@ EDITOR=vim visudo
 pacman -S grub efibootmgr dosfstools os-prober mtools
 mkdir /boot/EFI
 mount /dev/nvme0n1p1 /boot/EFI
-grub-install --target=x86_64-efi --bootloader-id=grub_uefi --recheck
+grub-install --target=x86_64-efi --bootloader=GRUB --efi-directory=/boot/EFI --removable
 grub-mkconfig -o /boot/grub/grub.cfg
 
 # install important packages
@@ -137,6 +137,6 @@ systemctl enable bluetooth-mesh.service
 
 exit
 
-umount -l /mnt
+umount -R /mnt
 
 
