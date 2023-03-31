@@ -145,9 +145,16 @@ reboot
 #######################################
 
 # install important packages
-firefox alacritty alsa-utils pipewire git bluez
+sudo pacman -S firefox alacritty alsa-utils pipewire git bluez
+sudo pacman -S xf86-video-fbdev xorg xorg-xinit awesome
 
 # enable bluetooth
 systemctl enable bluetooth.service
 systemctl enable bluetooth-mesh.service
+
+# xinitrc file
+cp /etc/X11/xinit/xinitrc /home/falk/.xinitrc
+sudo vim .xinitrc
+# delete last 5 lines
+"exec awesome"
 
