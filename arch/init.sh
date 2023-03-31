@@ -128,15 +128,20 @@ grub-install --target=x86_64-efi --bootloader=GRUB --efi-directory=/boot/EFI --r
 grub-mkconfig -o /boot/grub/grub.cfg
 
 # install important packages
-pacman -S networkmanager firefox alacritty alsa-utils pipewire git bluez
+pacman -S networkmanager 
 
 # enable the different managers
 systemctl enable NetworkManager
-systemctl enable bluetooth.service
-systemctl enable bluetooth-mesh.service
+
 
 exit
 
 umount -R /mnt
 
+# install important packages
+firefox alacritty alsa-utils pipewire git bluez
+
+# enable bluetooth
+systemctl enable bluetooth.service
+systemctl enable bluetooth-mesh.service
 
