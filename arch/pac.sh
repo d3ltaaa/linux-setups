@@ -16,8 +16,9 @@ mkdir /home/falk/.yay
 cd /home/falk/.yay
 git clone https://aur.archlinux.org/yay.git
 cd /home/falk/.yay/yay
-makepkg -si
 exit
+makepkg -si
+
 # packages - rice (yay)
 yay -S picom-jonaburg-fix
 yay -S font-manager-git
