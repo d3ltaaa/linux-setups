@@ -27,3 +27,7 @@ yay -S font-manager-git
 # set up awesome
 # set up picom
 # set up polybar
+# set up menu
+# set up audio
+sudo pacman -S alsa-utils pulseaudio pavucontrol
+systemctl --user enable pulseaudio && systemctl --user start pulseaudio
