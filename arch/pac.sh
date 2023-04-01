@@ -12,11 +12,11 @@ pacman -S firefox alacritty git xournalpp  flatpak
 
 # yay
 pacman -S base-devel
+exit
 mkdir /home/falk/.yay
 cd /home/falk/.yay
 git clone https://aur.archlinux.org/yay.git
 cd /home/falk/.yay/yay
-exit
 makepkg -si
 
 # packages - rice (yay)
