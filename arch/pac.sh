@@ -39,3 +39,5 @@ Include = /etc/pacman.d/mirrorlist"
 
 # set up spotify
 # https://github.com/Rigellute/spotify-tui
+# https://www.youtube.com/watch?v=TaPWqXFtce8
+# 
