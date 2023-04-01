@@ -31,3 +31,11 @@ yay -S font-manager-git
 # set up audio
 sudo pacman -S alsa-utils pulseaudio pavucontrol
 systemctl --user enable pulseaudio && systemctl --user start pulseaudio
+
+echo 
+"[multilib]
+Include = /etc/pacman.d/mirrorlist"
+/etc/pacman.conf
+
+# set up spotify
+# https://github.com/Rigellute/spotify-tui
