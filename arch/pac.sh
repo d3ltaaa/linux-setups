@@ -1,4 +1,4 @@
-sudo su
+
 # base xorg
 pacman -S xf86-video-fbdev xorg xorg-xinit 
 # wm
