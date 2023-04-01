@@ -1,6 +1,6 @@
 
 # base xorg
-pacman -S xf86-video-fbdev xorg xorg-xinit 
+pacman -S xf86-video-fbdev xorg xorg-xinit webkit2gtk
 # wm
 pacman -S awesome
 
@@ -22,3 +22,8 @@ makepkg -si
 # packages - rice (yay)
 yay -S picom-jonaburg-fix
 yay -S font-manager-git
+
+# set up nitrogen
+# set up awesome
+# set up picom
+# set up polybar
